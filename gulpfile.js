@@ -7,6 +7,13 @@ const rename = require("gulp-rename");
 const imagemin = require('gulp-imagemin');
 const htmlmin = require('gulp-htmlmin');
 
+const deploy = require('gulp-gh-pages'); 
+
+gulp.task('deploy', function () { 
+    return gulp.src("./dist/**/*") 
+      .pipe(deploy()) 
+});
+
 gulp.task('server', function() {
 
     browserSync({
