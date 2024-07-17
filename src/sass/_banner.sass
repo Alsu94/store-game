@@ -1,0 +1,52 @@
+.banner
+    background: $color-blue-dark
+    &-img
+        background: $color-blue-dark
+        grid-column: full-start / col-end 4
+        display: grid
+        grid-template-rows: repeat(24, 1fr)
+        grid-template-columns: repeat(16, 1fr)
+        background: url(../img/Rectangle_5.png) center / cover no-repeat
+        @include respond(tab-port)
+            grid-column: full-start / full-end
+        &__img-1
+            width: 100%
+            grid-column: 3 / 15
+            grid-row: 3 / 11
+            @include respond(tab-port)
+                height: 100%
+                object-fit: cover
+                grid-row: 3 / 21
+        &__img-2
+            width: 100%
+            grid-column: 6 / -1
+            grid-row: 10 / 22
+            transform: translateX(3.5rem)
+            @include respond(tab-port)
+                height: 100%
+                object-fit: cover
+                grid-row: 11 / 24
+                grid-column: 7 / 16
+                transform: none
+
+    &-text
+        background: $color-blue-dark
+        grid-column: col-start 5 / full-end
+        // display: flex
+        // justify-content: center
+        // align-items: start
+        // flex-direction: column
+        padding: 0 4vw //8% от ширины экрана
+        display: grid
+        align-content: center
+        justify-items: start
+        @include respond(tab-port)
+            grid-column: full-start / full-end
+            grid-row: 5 / 6
+            padding: 5rem
+    
+
+
+        // grid-template-rows repeat(3, minmax(min-content, 15rem))
+        &__text
+            margin-bottom: 4rem

@@ -1,0 +1,50 @@
+.cards
+    background: $color-gray-light
+    grid-column: center-start / center-end
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr))
+    justify-items: stretch
+    align-items: stretch
+    grid-gap: 5.9rem 4rem
+    color: black
+    margin: 15rem 0
+    @include respond(phone)
+        margin: 10rem 0
+
+.card
+    background: $color-blue-dark
+    display: grid
+    grid-template-columns: repeat(6, 1fr)
+    &__img
+        width: 100%
+        grid-column: 1 / -1
+    &__platform
+        grid-column: 2 / span 4
+        background-color: $color-green-dark
+        padding: 1.5rem 0
+        font-weight: 700
+        color: white
+        transform: translateY(-2.5rem)
+        text-align: center
+    &__feature
+        grid-column: 1 / span 6
+        padding: 1rem 4rem 3rem
+        background-color: $color-blue-dark
+        font-weight: 300
+        letter-spacing: 0%
+        color: white
+        display: grid
+        grid-template-columns: repeat(2, minmax(12rem, 1fr))
+        grid-gap: 4rem 1.5rem
+        
+    &__icon
+        display: flex
+        &_svg
+            width: 2rem
+            height: 2rem
+        &_label
+            padding-left: .7rem
+    &__btn
+        grid-column: 1 / span 6
+
+
